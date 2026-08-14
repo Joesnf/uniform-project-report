@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Instructor Uniform Project — Current Progress & Decision Brief</title>
+<style>
+  :root{
+    --bg:#f6f7f9;
+    --card:#ffffff;
+    --text:#1f2937;
+    --muted:#667085;
+    --line:#dfe3e8;
+    --navy:#17324d;
+    --blue:#eaf2f8;
+    --blue-b:#9ec1d9;
+    --amber:#fff6db;
+    --amber-b:#e6c45c;
+    --rose:#fff0f0;
+    --rose-b:#df9a9a;
+    --green:#edf7f1;
+    --green-b:#9ec6aa;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",Arial,sans-serif;line-height:1.55}
+  .wrap{max-width:1120px;margin:0 auto;padding:34px 22px 64px}
+  header{margin-bottom:20px}
+  h1{font-size:28px;margin:0 0 4px;color:var(--navy);letter-spacing:.2px}
+  .subtitle{color:var(--muted);font-size:14px}
+  .status-line{margin-top:14px;padding:13px 16px;background:#eef3f7;border-left:4px solid var(--navy);border-radius:8px;font-size:14px}
+  .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+  .span-12{grid-column:span 12}.span-8{grid-column:span 8}.span-6{grid-column:span 6}.span-4{grid-column:span 4}
+  h2{font-size:18px;margin:0 0 12px;color:var(--navy)}
+  h3{font-size:15px;margin:0 0 8px;color:#243b53}
+  p{margin:6px 0}
+  ul{margin:8px 0 0;padding-left:20px}
+  li{margin:4px 0}
+  .action{border:2px solid #d9a441;background:#fffaf0}
+  .action strong{color:#8a5a00}
+  .label{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;font-weight:600;margin-right:6px}
+  .confirmed{background:var(--blue);border:1px solid var(--blue-b);color:#24465f}
+  .assessment{background:var(--amber);border:1px solid var(--amber-b);color:#6b5412}
+  .tbc{background:var(--rose);border:1px solid var(--rose-b);color:#7d3f3f}
+  .backup{background:#f1f3f5;border:1px solid #cfd4da;color:#555}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{border-bottom:1px solid var(--line);padding:10px 9px;vertical-align:top;text-align:left}
+  th{background:#f8fafc;color:#344054;font-weight:700}
+  tr:last-child td{border-bottom:none}
+  .status-table td:nth-child(1){font-weight:700;white-space:nowrap}
+  .status-table td:nth-child(2){white-space:nowrap}
+  .brand-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .brand{border:1px solid var(--line);border-radius:10px;padding:14px;background:#fff}
+  .brand-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .brand-name{font-weight:800;color:var(--navy);font-size:16px}
+  .product{font-weight:650;margin-top:3px}
+  .price{font-size:13px;color:var(--muted);margin-top:5px}
+  a{color:#155a8a;text-decoration:none;font-weight:650}
+  a:hover{text-decoration:underline}
+  .link{white-space:nowrap;font-size:13px}
+  .note{font-size:12px;color:var(--muted);margin-top:8px}
+  .criteria{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .criterion{border:1px solid var(--line);border-radius:10px;padding:13px;background:#fbfcfd}
+  .criterion .num{font-size:12px;font-weight:700;color:#64748b;letter-spacing:.08em}
+  .criterion h3{margin-top:2px}
+  .brand-image{font-size:15px;font-weight:700;color:var(--navy);margin:4px 0 8px}
+  .quote{font-size:17px;font-weight:700;color:#213547;border-left:3px solid var(--navy);padding-left:12px;margin:10px 0}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .step{background:#f8fafc;border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-size:13px}
+  .arrow{color:#98a2b3}
+  .small{font-size:13px;color:var(--muted)}
+  .critical-list{columns:2;column-gap:28px;margin-top:6px}
+  .critical-list li{break-inside:avoid;margin-bottom:8px}
+  footer{margin-top:24px;color:#98a2b3;font-size:12px;text-align:right}
+  @media(max-width:800px){
+    .span-8,.span-6,.span-4{grid-column:span 12}
+    .brand-grid,.criteria{grid-template-columns:1fr}
+    .critical-list{columns:1}
+    table{font-size:12px}
+    th,td{padding:8px 6px}
+  }
+  @media print{
+    body{background:#fff}.wrap{max-width:none;padding:18px}.card{box-shadow:none;break-inside:avoid}.link{display:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Instructor Uniform Project</h1>
+    <div class="subtitle">Current Progress &amp; Decision Brief · 2026.08.14</div>
+    <div class="status-line"><strong>目前位置：</strong>需求定義與第一輪品牌篩選已完成。Patagonia 尚待內部完成問卷；Norrøna 總公司已回覆並轉交日本代理；Peak Performance 與 Goldwin 等待品牌回覆。目前仍在供應商驗證階段，尚未進入品牌選擇。</div>
+  </header>
+
+  <div class="grid">
+    <section class="card action span-12">
+      <h2>Action Required — Patagonia</h2>
+      <p><strong>需要 Jeff：</strong>Patagonia Uniform Program（團體制服採購方案）問卷尚未正式提交。需要 Jeff 完成／確認問卷後提交，之後才會進入方案資格、產品建議與供應條件確認。</p>
+      <p class="small"><strong>下一步：</strong>Jeff 完成／確認問卷 → 提交 → 等待 Patagonia 回覆。</p>
+    </section>
+
+    <section class="card span-12">
+      <h2>1 | Current Status</h2>
+      <table class="status-table">
+        <thead><tr><th>品牌</th><th>目前狀態</th><th>等待／確認內容</th><th>下一步</th></tr></thead>
+        <tbody>
+          <tr><td>Patagonia</td><td><span class="label tbc">內部待辦</span></td><td>問卷完成；提交後確認：方案資格｜產品建議｜首批供貨｜後續小量追加｜產品／顏色延續</td><td>Jeff 完成後提交</td></tr>
+          <tr><td>Norrøna</td><td><span class="label confirmed">總公司已回覆</span></td><td>等待日本代理聯絡；後續確認：產品建議｜男女同色｜首批供貨｜後續小量追加｜產品／顏色延續｜維修／售後｜價格與交期</td><td>先等日本代理；若數個工作天未聯絡，再追蹤總公司</td></tr>
+          <tr><td>Peak Performance</td><td><span class="label tbc">等待品牌回覆</span></td><td>產品建議｜男女同色｜團體採購／供貨｜後續小量追加｜產品／顏色延續</td><td>8/17 起依序處理</td></tr>
+          <tr><td>Goldwin</td><td><span class="label tbc">等待品牌回覆</span></td><td>Snow Workwear（Goldwin 的雪上工作者制服方案）是否適用｜產品建議｜男女同色｜首批供貨｜後續小量追加｜產品／顏色延續｜公司採購後的維修／保固</td><td>回覆後補問缺項</td></tr>
+          <tr><td>Descente</td><td><span class="label backup">備案</span></td><td>前四個主要候選不足時再啟動</td><td>目前無動作</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card span-6">
+      <h2>2 | Our Brand Image / Uniform Direction</h2>
+      <div class="quote">Mountain professional, premium but approachable.</div>
+      <p>我們希望制服呈現專業、可靠、有質感，但不讓客人覺得有距離感。不是競技隊，也不是過度硬派的高山形象。</p>
+      <ul>
+        <li>Ski 與 Snowboard 都能自然融入</li>
+        <li>乾淨、成熟、低調，不追逐短期流行</li>
+        <li>Navy、slate blue、muted blue 等低飽和藍色優先</li>
+        <li>避免過度 race-oriented 或明顯 color blocking</li>
+      </ul>
+    </section>
+
+    <section class="card span-6">
+      <h2>3 | Hard Requirements &amp; Preferences</h2>
+      <h3>必要條件</h3>
+      <ul>
+        <li>純 3L Shell（三層防水外殼、不含保暖層）</li>
+        <li>適合北海道日常雪上工作</li>
+        <li>Ski / Snowboard 都適用</li>
+        <li>男女款可配置並維持一致團隊形象</li>
+        <li>可接受的 Blue family</li>
+        <li>具備合理追加／替換路徑</li>
+      </ul>
+      <h3 style="margin-top:12px">偏好條件</h3>
+      <p>Navy 優先；乾淨、單色；儘量避免大面積撞色；維修保養制度成熟；後續產品／顏色能維持相近外觀。</p>
+    </section>
+
+    <section class="card span-12">
+      <h2>4 | Decision Standards</h2>
+      <p class="small">我們不是在比「哪件最厲害」，而是在看哪一套最適合長期當教練制服。</p>
+      <div class="criteria">
+        <div class="criterion"><div class="num">01</div><h3>Product Fit</h3><p>先確認產品本身：Shell、北海道工作情境、Ski + Snowboard、男女款、團隊外觀與顏色。這一層不符合，原則上淘汰。</p></div>
+        <div class="criterion"><div class="num">02</div><h3>Uniform Continuity</h3><p>確認首批 25–30 件能否供貨、未來只補 2–5 件是否仍可下單，以及型號／顏色更換後是否能維持團隊一致外觀。</p></div>
+        <div class="criterion"><div class="num">03</div><h3>Long-term Value</h3><p>比較耐用度、維修保養、保固售後、雪季中損壞後的替換速度，以及標誌加工是否影響產品或保固。</p></div>
+        <div class="criterion"><div class="num">04</div><h3>Commercial &amp; Practical</h3><p>最後才比較實際團體價格、交期、日本支援、樣品／試穿、標誌加工與後續採購條件。</p></div>
+      </div>
+    </section>
+
+    <section class="card span-12">
+      <h2>5 | Brand Shortlist &amp; Benchmark Products</h2>
+      <p class="small">基準產品＝用來對照規格、價格與品牌建議的比較基準，不代表最終採購型號。以下官方連結皆會在<strong>新分頁</strong>開啟。</p>
+      <div class="brand-grid">
+        <div class="brand">
+          <div class="brand-top"><div><div class="brand-name">Patagonia</div><div class="product">PowSlayer</div></div><a class="link" href="https://www.patagonia.jp/powslayer-freeride-kit/" target="_blank" rel="noopener noreferrer">官方頁面 ↗</a></div>
+          <div class="price">公開零售參考：¥116,600</div>
+          <p>暫定比較基準；教練用途與最終推薦待 Uniform Program 確認。</p>
+        </div>
+        <div class="brand">
+          <div class="brand-top"><div><div class="brand-name">Norrøna</div><div class="product">Lofoten / Tamok</div></div><div><a class="link" href="https://www.norrona.com/en-GB/products/lofoten/lofoten-gore-tex-pro-jacket-men-25/" target="_blank" rel="noopener noreferrer">Lofoten ↗</a><br><a class="link" href="https://www.norrona.com/en-GB/products/tamok/tamok-gore-tex-performance-shell-jacket-mens/" target="_blank" rel="noopener noreferrer">Tamok ↗</a></div></div>
+          <div class="price">公開零售參考：約 ¥93,500–¥128,500</div>
+          <p>日本代理將接手本案；品牌推薦、供貨、追加、維修售後與產品／顏色延續待確認。</p>
+        </div>
+        <div class="brand">
+          <div class="brand-top"><div><div class="brand-name">Peak Performance</div><div class="product">Alpine GORE-TEX C-Knit 3L</div></div><a class="link" href="https://peakperformance.jp/products/alpine-gore-tex-3l-jacket-m-243" target="_blank" rel="noopener noreferrer">官方頁面 ↗</a></div>
+          <div class="price">公開零售參考：¥94,600</div>
+          <p>目前最接近需求的比較款；男女同色、團體供貨與產品／顏色延續待確認。</p>
+        </div>
+        <div class="brand">
+          <div class="brand-top"><div><div class="brand-name">Goldwin</div><div class="product">Work Pocket 3L / PRO 3L</div></div><a class="link" href="https://www.goldwin-global.com/jp/ski/collection-fw26/" target="_blank" rel="noopener noreferrer">官方系列頁 ↗</a></div>
+          <div class="price">公開零售參考：¥126,500 / ¥148,500</div>
+          <p>Snow Workwear 是 Goldwin 的雪上工作者制服方案；是否適用滑雪學校、實際產品與延續條件待確認。</p>
+        </div>
+      </div>
+      <p class="note">Descente S.I.O SHELL 3L（約 ¥88,000）目前保留為備案，不列入第一輪主動聯絡。</p>
+    </section>
+
+    <section class="card span-12">
+      <h2>6 | Information Quality</h2>
+      <p class="small"><span class="label confirmed">已確認</span>官方資料或正式回覆； <span class="label assessment">內部判斷</span>研究後的判斷，不等同事實； <span class="label tbc">待確認</span>尚未取得足夠答案。</p>
+      <table>
+        <thead><tr><th>品牌</th><th>已確認</th><th>內部判斷（非官方事實）</th><th>待確認／未知</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Patagonia</strong></td><td>有 Uniform Program；滑雪學校屬公開適用對象；方案需審查。</td><td style="background:var(--amber)">維修文化、品牌價值與長期制服方向契合。</td><td>問卷未提交；產品、男女同色、首批供貨、小量追加、產品／顏色延續與採購條件待確認。</td></tr>
+          <tr><td><strong>Norrøna</strong></td><td>總公司已正式回覆，確認日本有代理，並已轉介本案。</td><td style="background:var(--amber)">在地窗口可能有利採購與售後；實際能力尚未確認。</td><td>等待日本代理聯絡；推薦產品、男女同色、首批與小量追加、產品／顏色延續、維修／售後、價格與交期待確認。</td></tr>
+          <tr><td><strong>Peak Performance</strong></td><td>日本有正式商業詢問窗口；Alpine 3L 男女系列存在。</td><td style="background:var(--amber)">乾淨、高端雪上形象與制服方向契合。</td><td>推薦產品、男女同色、團體採購、小量追加、產品／顏色延續待確認。</td></tr>
+          <tr><td><strong>Goldwin</strong></td><td>Snow Workwear 是 Goldwin 的雪上工作者制服方案，公開主張同設計／同色持續供應；另有男女 3L Shell。</td><td style="background:var(--amber)">日本雪上工作情境與長期制服需求高度相關。</td><td>方案是否適用滑雪學校、推薦產品、實際產品／顏色延續年限、小量追加與公司採購後的維修／保固待確認。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card span-4">
+      <h2>7 | Retail Price Reference</h2>
+      <p><strong>主要候選：</strong><br>約 ¥93,500–¥148,500 / 件</p>
+      <p><strong>25 件零售價值：</strong><br>約 ¥2.34M–¥3.71M</p>
+      <p><strong>30 件零售價值：</strong><br>約 ¥2.81M–¥4.46M</p>
+      <p class="small"><strong>正式採購預算：待官方報價後確認。</strong><br>團體條件、標誌加工、運費／進口、維修與替換成本尚未計入。</p>
+    </section>
+
+    <section class="card span-8">
+      <h2>8 | Decision-Critical Unknowns</h2>
+      <p class="small">以下任一項若答案不理想，都可能使候選方案失去實際可行性。</p>
+      <ul class="critical-list">
+        <li><strong>採購資格與商業條件：</strong>是否接受我們的組織型態、商業用途與 25–30 件首批採購。</li>
+        <li><strong>訂購窗口與交期：</strong>是否採季節預購；錯過窗口是否會影響雪季前交貨。</li>
+        <li><strong>後續小量追加：</strong>每年只補 2–5 件時，是否仍可下單，最低數量、價格與交期是否改變。</li>
+        <li><strong>產品／顏色延續：</strong>停產或換代後，是否能維持相近團隊外觀。</li>
+        <li><strong>商用維修／保固：</strong>公司採購與制服高頻使用是否適用，刺繡／印刷是否影響保固。</li>
+        <li><strong>尺寸與教學適配：</strong>男女尺寸、特殊尺寸、口袋／無線電、帽型與活動度是否合適。</li>
+        <li><strong>雪季替換韌性：</strong>損壞一件後多久能補；是否需要首批備品。</li>
+        <li><strong>通路／政策變動：</strong>若日本代理或品牌政策改變，是否仍有替代採購與補貨路徑。</li>
+        <li><strong>壽命假設與保養：</strong>3–5 年以上壽命是否能在實際洗滌與高頻使用下成立。</li>
+      </ul>
+    </section>
+
+    <section class="card span-12">
+      <h2>9 | Next Decision Point</h2>
+      <div class="flow">
+        <span class="step">收集正式回覆</span><span class="arrow">→</span>
+        <span class="step">補齊缺失資訊</span><span class="arrow">→</span>
+        <span class="step">必要條件篩選</span><span class="arrow">→</span>
+        <span class="step">建立可比較資料</span><span class="arrow">→</span>
+        <span class="step">2–3 個最終候選</span><span class="arrow">→</span>
+        <span class="step">報價／顏色／供貨／維修／樣品或試穿</span><span class="arrow">→</span>
+        <span class="step"><strong>Final Decision</strong></span>
+      </div>
+      <p class="small" style="margin-top:12px">管理原則：收到第一封回覆不等於可以開始評分。只有關鍵資料補齊到可比較程度，且所有待確認項目已被明確標示後，才進入最終候選篩選。</p>
+    </section>
+  </div>
+
+  <footer>Instructor Uniform Project · 2026.08.14</footer>
+</div>
+</body>
+</html>
