@@ -1,6 +1,6 @@
 # Uniform Project — Supplier Fact Record
 
-Last updated: 2026-08-14
+Last updated: 2026-08-15
 
 ## Purpose
 This file is the source-of-truth record for supplier information used in the Uniform Project. It is not intended to be displayed in full in the management brief. The brief may summarize it, but future analysis should refer back to this record before re-checking facts that have already been confirmed.
@@ -46,7 +46,7 @@ Official Patagonia Japan Corporate Sales email received 2026-08-12 regarding the
 - Whether PowSlayer is available/recommended through the Uniform Program for this use.
 - Men's and women's matching color availability for the initial 25–30 units.
 - Actual snow-wear stock timing for the target season.
-- Successor strategy if the selected product/color is discontinued.
+- Product continuation, color-continuation approach, and successor model if the selected product/color is discontinued.
 - Logo/customization method and any effect on repair/warranty.
 
 ---
@@ -54,26 +54,33 @@ Official Patagonia Japan Corporate Sales email received 2026-08-12 regarding the
 ## Norrøna
 
 ### Source
-Direct reply from Norrøna headquarters on 2026-08-13/14: the company confirmed a Japan distributor and said the distributor would contact us.
+Direct replies from Norrøna Business / Sales and the Japan distributor, Full Marks, received 2026-08-13 to 2026-08-14.
 
 ### Confirmed
 - Norrøna has a Japan distributor.
-- Norrøna headquarters has referred this project to the Japan distributor.
+- Norrøna headquarters referred this project to the Japan distributor.
+- The Japan distributor has now contacted us and confirmed they reviewed the company's request.
+- The responsible representative is currently on summer vacation; a fuller response will follow after they return.
+- For this type of support/order, orders are typically placed during the previous winter.
+- If products are needed for the 2026/27 winter season, fulfillment will depend on available inventory.
+- The Japan distributor said they will consider a discount, with an indicated maximum of approximately 30% off the Japanese list price.
 - Norrøna does not operate a dedicated uniform program; B2B inquiries were directed through its business channel.
 
 ### Assessment
-- A Japan distributor may improve procurement and after-sales practicality, but actual capability is not yet confirmed.
+- A Japan distributor improves the practical procurement path and may improve after-sales support, but actual repair/reorder capability is not yet confirmed.
+- The distributor's note about prior-winter ordering suggests seasonal order timing may be an important procurement constraint.
+- The approximately 30% discount is an indicated ceiling, not a confirmed quote for this project.
 - Lofoten / Tamok remain benchmark product families, not final recommendations.
 
 ### TBC
-- Japan distributor contact.
+- Confirm whether the target use is the 2026/27 season.
 - Recommended product/family for ski + snowboard instructor use.
 - Men's/women's matching color availability.
-- Initial 25–30 unit supply.
+- Actual 25–30 unit inventory for the target season.
 - Small reorders.
 - Product/color continuity and successor approach.
 - Repair/after-sales route in Japan.
-- B2B/team pricing and lead time.
+- Final B2B/team price and lead time.
 
 ---
 
@@ -82,6 +89,7 @@ Direct reply from Norrøna headquarters on 2026-08-13/14: the company confirmed 
 ### Confirmed
 - Japan has a formal business inquiry route.
 - Alpine GORE-TEX C-Knit 3L is the current benchmark product direction.
+- Email verification has been completed and the inquiry has been accepted.
 - The Japan inquiry channel is in a summer closure period; inquiries are processed sequentially from 2026-08-17.
 
 ### Assessment
