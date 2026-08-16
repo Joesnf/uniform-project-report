@@ -1,6 +1,6 @@
 # Uniform Project — Supplier Fact Record
 
-Last updated: 2026-08-15
+Last updated: 2026-08-16
 
 ## Purpose
 This file is the source-of-truth record for supplier information used in the Uniform Project. It is not intended to be displayed in full in the management brief. The brief may summarize it, but future analysis should refer back to this record before re-checking facts that have already been confirmed.
@@ -18,11 +18,14 @@ This file is the source-of-truth record for supplier information used in the Uni
 ## Patagonia
 
 ### Source
-Official Patagonia Japan Corporate Sales email received 2026-08-12 regarding the Uniform Program, plus attached program materials/questionnaire.
+Official Patagonia Japan Corporate Sales email received 2026-08-12 regarding the Uniform Program, attached program materials/questionnaire, and completed questionnaire submitted 2026-08-15.
 
 ### Confirmed
 - Uniform Program application is reviewed based on intended uniform use, business activity, and an environmental/social responsibility questionnaire.
 - The questionnaire must be submitted before Patagonia reviews eligibility.
+- The completed Snow and Flow questionnaire was submitted to Patagonia Japan Corporate Sales on 2026-08-15, with Jeff Leung CC'd.
+- The submitted attachment was `アンケート回答_Snow and Flow合同会社.docx`.
+- Patagonia's contact sent an automatic reply stating she is off on 2026-08-17 and will respond sequentially from 2026-08-18 onward.
 - Products are basically selected from the Uniform Program catalog.
 - Snow wear sales begin from October.
 - If inventory can be secured and customization details are finalized, delivery is approximately 3 weeks after payment and final artwork confirmation.
@@ -41,8 +44,7 @@ Official Patagonia Japan Corporate Sales email received 2026-08-12 regarding the
 - Repair culture and brand values appear compatible with the project's long-term uniform intent, but this remains an internal assessment.
 
 ### TBC
-- Jeff to complete/confirm the questionnaire before submission.
-- Program eligibility after review.
+- Program eligibility after questionnaire review.
 - Whether PowSlayer is available/recommended through the Uniform Program for this use.
 - Men's and women's matching color availability for the initial 25–30 units.
 - Actual snow-wear stock timing for the target season.
@@ -54,16 +56,19 @@ Official Patagonia Japan Corporate Sales email received 2026-08-12 regarding the
 ## Norrøna
 
 ### Source
-Direct replies from Norrøna Business / Sales and the Japan distributor, Full Marks, received 2026-08-13 to 2026-08-14.
+Direct replies from Norrøna Business / Sales and the Japan distributor, Full Marks, received 2026-08-13 to 2026-08-14, plus our detailed reply sent 2026-08-15.
 
 ### Confirmed
 - Norrøna has a Japan distributor.
 - Norrøna headquarters referred this project to the Japan distributor.
-- The Japan distributor has now contacted us and confirmed they reviewed the company's request.
+- The Japan distributor has contacted us and confirmed they reviewed the company's request.
 - The responsible representative is currently on summer vacation; a fuller response will follow after they return.
 - For this type of support/order, orders are typically placed during the previous winter.
 - If products are needed for the 2026/27 winter season, fulfillment will depend on available inventory.
 - The Japan distributor said they will consider a discount, with an indicated maximum of approximately 30% off the Japanese list price.
+- We confirmed to the Japan distributor that the target season is 2026/27, the initial requirement is approximately 25–30 jackets, and that the intended product is a non-insulated 3-layer shell for daily ski and snowboard instructor use in Hokkaido.
+- We also communicated the preferred low-saturation blue color direction, men's/women's visual consistency, and the need to add or replace approximately 2–5 jackets at a time in future seasons while maintaining a consistent overall uniform appearance.
+- Lofoten and Tamok were presented as benchmark references, while leaving the final product recommendation open to Norrøna / Full Marks.
 - Norrøna does not operate a dedicated uniform program; B2B inquiries were directed through its business channel.
 
 ### Assessment
@@ -73,11 +78,10 @@ Direct replies from Norrøna Business / Sales and the Japan distributor, Full Ma
 - Lofoten / Tamok remain benchmark product families, not final recommendations.
 
 ### TBC
-- Confirm whether the target use is the 2026/27 season.
 - Recommended product/family for ski + snowboard instructor use.
 - Men's/women's matching color availability.
-- Actual 25–30 unit inventory for the target season.
-- Small reorders.
+- Actual 25–30 unit inventory for the 2026/27 season.
+- Small reorders of approximately 2–5 units.
 - Product/color continuity and successor approach.
 - Repair/after-sales route in Japan.
 - Final B2B/team price and lead time.
@@ -111,6 +115,7 @@ Direct replies from Norrøna Business / Sales and the Japan distributor, Full Ma
 - Snow Workwear is a Goldwin program aimed at people working on snow.
 - The program publicly states an intent to continue the same design/color so users can replace only what is needed each year.
 - Goldwin has technical 3L ski shell products.
+- Our inquiry to Goldwin was sent; no formal supplier response has been received yet.
 
 ### Assessment
 - Snow Workwear's continuity concept aligns very closely with the project's long-term uniform needs.
