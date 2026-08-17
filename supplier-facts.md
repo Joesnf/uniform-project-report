@@ -1,6 +1,6 @@
 # Uniform Project — Supplier Fact Record
 
-Last updated: 2026-08-16
+Last updated: 2026-08-17
 
 ## Purpose
 This file is the source-of-truth record for supplier information used in the Uniform Project. It is not intended to be displayed in full in the management brief. The brief may summarize it, but future analysis should refer back to this record before re-checking facts that have already been confirmed.
@@ -94,10 +94,12 @@ Direct replies from Norrøna Business / Sales and the Japan distributor, Full Ma
 - Japan has a formal business inquiry route.
 - Alpine GORE-TEX C-Knit 3L is the current benchmark product direction.
 - Email verification has been completed and the inquiry has been accepted.
-- The Japan inquiry channel is in a summer closure period; inquiries are processed sequentially from 2026-08-17.
+- On 2026-08-17, Peak Performance customer support confirmed inquiry #81013 has been forwarded to the responsible department for review.
+- The responsible department will contact us again after reviewing the request; timing is not guaranteed and may take time depending on the review.
 
 ### Assessment
 - The Alpine line fits the clean/premium visual direction better than other current Peak Performance options reviewed.
+- The inquiry has moved beyond customer-support intake, but no commercial/product feasibility has been confirmed yet.
 
 ### TBC
 - Official product recommendation.
@@ -111,23 +113,28 @@ Direct replies from Norrøna Business / Sales and the Japan distributor, Full Ma
 
 ## Goldwin
 
+### Source
+Official Goldwin reply from Yoshihiro Sawada received 2026-08-17.
+
 ### Confirmed
 - Snow Workwear is a Goldwin program aimed at people working on snow.
 - The program publicly states an intent to continue the same design/color so users can replace only what is needed each year.
-- Goldwin has technical 3L ski shell products.
-- Our inquiry to Goldwin was sent; no formal supplier response has been received yet.
+- Goldwin has technical 3L ski shell products in its broader ski collection.
+- Goldwin formally replied on 2026-08-17.
+- For the school-instructor workwear route discussed, Goldwin stated that a shell type without insulation is not currently offered.
+- Goldwin does offer ropeway workwear and patrol-specific wear, but those do not resolve our non-insulated shell requirement as currently presented.
+- Sawada-san has asked Nakamura-san, the responsible colleague, to check whether Goldwin can propose another suitable option and requested that we wait for that follow-up.
 
 ### Assessment
-- Snow Workwear's continuity concept aligns very closely with the project's long-term uniform needs.
-- Japan-based snow-work experience may be operationally relevant for Niseko, but this remains an internal assessment.
+- The Snow Workwear continuity concept remains highly aligned with the project, but its current lack of a non-insulated shell is a major product-fit conflict with a hard requirement.
+- Goldwin should remain open pending Nakamura-san's alternative proposal, but the original Snow Workwear route is now materially less viable.
 
 ### TBC
-- Whether a ski/snowboard school is eligible for Snow Workwear.
-- Which product line Goldwin recommends for this project.
-- Whether a technical 3L shell can be supplied under the relevant program.
+- Whether Nakamura-san can propose another non-insulated 3L shell route suitable for ski/snowboard instructors.
+- Whether a technical ski-collection 3L shell can be supplied under an appropriate school/team/commercial arrangement.
 - Men's/women's matching color availability.
-- Initial 25–30 unit supply and future small reorders.
-- Actual duration/conditions of same-design/same-color continuation.
+- Initial 25–30 unit supply and future small reorders if an alternative product is proposed.
+- Product/color continuity for any alternative route.
 - Company-purchase repair/warranty terms.
 - Price and lead time.
 
