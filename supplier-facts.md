@@ -13,9 +13,6 @@ This file is the source-of-truth record for supplier information used in the Uni
 - When a supplier reply changes a fact, update this record first, then update the HTML brief.
 - Do not collapse **small reorder capability** and **product/color continuity** into one concept. They are separate risks.
 
-## Latest status check — 2026-08-18
-As of the latest Gmail check on 2026-08-18, no additional substantive supplier reply has arrived beyond the 2026-08-17 Goldwin and Peak Performance updates. Patagonia, Norrøna, Peak Performance and Goldwin are all currently waiting on the supplier side.
-
 ---
 
 ## Patagonia
@@ -93,24 +90,25 @@ Direct replies from Norrøna Business / Sales and the Japan distributor, Full Ma
 
 ## Peak Performance
 
+### Source
+Official reply from Peak Performance Sales / Amer Sports Japan received 2026-08-18, following inquiry #81013.
+
 ### Confirmed
 - Japan has a formal business inquiry route.
-- Alpine GORE-TEX C-Knit 3L is the current benchmark product direction.
-- Email verification has been completed and the inquiry has been accepted.
-- On 2026-08-17, Peak Performance customer support confirmed inquiry #81013 has been forwarded to the responsible department for review.
-- The responsible department will contact us again after reviewing the request; timing is not guaranteed and may take time depending on the review.
+- Alpine GORE-TEX C-Knit 3L was the benchmark product direction used for our inquiry.
+- Email verification was completed and inquiry #81013 was accepted, then forwarded internally for review.
+- On 2026-08-18, Peak Performance Sales (Akihiro Fujiwara) formally declined the uniform project for now after internal review.
+- The reasons given were: difficulty securing the requested inventory; preference for a United-certified school; and limited B2B staffing/resources in Japan.
+- Peak Performance Japan currently focuses branding activity on limited areas.
+- The reply states that the company intends to develop this business in the future and may reconsider if conditions improve.
 
 ### Assessment
-- The Alpine line fits the clean/premium visual direction better than other current Peak Performance options reviewed.
-- The inquiry has moved beyond customer-support intake, but no commercial/product feasibility has been confirmed yet.
+- Peak Performance is no longer an active candidate for the current 2026/27 procurement round.
+- The rejection is primarily commercial/operational rather than a product-performance rejection.
+- It may be worth revisiting in a future season if B2B capacity or qualification requirements change.
 
-### TBC
-- Official product recommendation.
-- Men's/women's matching color supply.
-- 25–30 unit procurement terms.
-- Small reorder capability.
-- Product/color continuity.
-- Price and lead time.
+### Status
+- **Not proceeding for current round.** Keep as a future watchlist item only.
 
 ---
 
