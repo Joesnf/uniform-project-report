@@ -1,6 +1,6 @@
 # Uniform Project — Supplier Fact Record
 
-Last updated: 2026-08-17
+Last updated: 2026-08-18
 
 ## Purpose
 This file is the source-of-truth record for supplier information used in the Uniform Project. It is not intended to be displayed in full in the management brief. The brief may summarize it, but future analysis should refer back to this record before re-checking facts that have already been confirmed.
@@ -12,6 +12,9 @@ This file is the source-of-truth record for supplier information used in the Uni
 - **Unknown**: no reliable answer yet.
 - When a supplier reply changes a fact, update this record first, then update the HTML brief.
 - Do not collapse **small reorder capability** and **product/color continuity** into one concept. They are separate risks.
+
+## Latest status check — 2026-08-18
+As of the latest Gmail check on 2026-08-18, no additional substantive supplier reply has arrived beyond the 2026-08-17 Goldwin and Peak Performance updates. Patagonia, Norrøna, Peak Performance and Goldwin are all currently waiting on the supplier side.
 
 ---
 
