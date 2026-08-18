@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Instructor Uniform Project — Team Update</title>
 <style>
-  :root{--bg:#f6f7f9;--card:#fff;--text:#24313f;--muted:#667085;--line:#dde3ea;--navy:#17324d;--soft:#eef3f7;--wait:#fff5dd;--ok:#eaf4ee;--backup:#f1f3f5}
+  :root{--bg:#f6f7f9;--card:#fff;--text:#24313f;--muted:#667085;--line:#dde3ea;--navy:#17324d;--soft:#eef3f7;--wait:#fff5dd;--ok:#eaf4ee;--backup:#f1f3f5;--stop:#fce8e6}
   *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",Arial,sans-serif;line-height:1.55}
   .wrap{max-width:900px;margin:0 auto;padding:34px 20px 60px}h1{margin:0;color:var(--navy);font-size:28px}.sub{color:var(--muted);font-size:14px;margin-top:4px}
-  .hero,.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin-top:16px}.hero{border-left:4px solid var(--navy)}h2{font-size:18px;color:var(--navy);margin:0 0 10px}h3{font-size:15px;margin:0 0 5px;color:#31485d}p{margin:6px 0}ul{margin:8px 0 0;padding-left:20px}li{margin:4px 0}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.brand{border:1px solid var(--line);border-radius:10px;padding:14px;background:#fbfcfd}.name{font-weight:800;color:var(--navy)}.product{font-weight:650;margin-top:2px}.status{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;margin-top:7px}.waiting{background:var(--wait)}.progress{background:var(--ok)}.backup{background:var(--backup)}
+  .hero,.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin-top:16px}.hero{border-left:4px solid var(--navy)}h2{font-size:18px;color:var(--navy);margin:0 0 10px}p{margin:6px 0}ul{margin:8px 0 0;padding-left:20px}li{margin:4px 0}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.brand{border:1px solid var(--line);border-radius:10px;padding:14px;background:#fbfcfd}.name{font-weight:800;color:var(--navy)}.product{font-weight:650;margin-top:2px}.status{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;margin-top:7px}.waiting{background:var(--wait)}.progress{background:var(--ok)}.backup{background:var(--backup)}.stopped{background:var(--stop)}
   .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.step{padding:7px 10px;border:1px solid var(--line);background:#f8fafc;border-radius:999px;font-size:13px}.arrow{color:#98a2b3}.small{font-size:13px;color:var(--muted)}
   @media(max-width:700px){.grid{grid-template-columns:1fr}}
 </style>
@@ -23,11 +23,6 @@
     <h2>我們現在在做什麼？</h2>
     <p>正在評估下一套 Ski / Snowboard Instructor 外套。目標不是只換一件新雪衣，而是找一套<strong>適合北海道日常教學、團隊外觀一致，而且未來可以持續補貨與長期使用</strong>的制服系統。</p>
     <p>這一階段只處理 <strong>Outer Shell</strong>，現有 Mid Layer 會繼續使用。</p>
-  </section>
-
-  <section class="card">
-    <h2>最新狀態</h2>
-    <p>截至 8/18 最新檢查，今天沒有收到新的實質供應商回覆。四個主要品牌目前都在供應商端處理中，因此現在不需要團隊做額外動作。</p>
   </section>
 
   <section class="card">
@@ -45,12 +40,12 @@
   <section class="card">
     <h2>目前主要候選</h2>
     <div class="grid">
-      <div class="brand"><div class="name">Patagonia</div><div class="product">PowSlayer（比較基準）</div><span class="status progress">等待資格審查</span><p class="small">8/15 已提交 Uniform Program 問卷；8/18 起進入對方可開始依序處理的時間點。</p></div>
+      <div class="brand"><div class="name">Patagonia</div><div class="product">PowSlayer（比較基準）</div><span class="status progress">問卷已提交</span><p class="small">8/15 已提交 Uniform Program 問卷；等待資格審查與產品建議。</p></div>
       <div class="brand"><div class="name">Norrøna</div><div class="product">Lofoten / Tamok</div><span class="status progress">日本代理接手中</span><p class="small">已提供 2026/27、25–30 件、3L Shell 與長期補貨需求；等待具體產品與庫存建議。</p></div>
-      <div class="brand"><div class="name">Peak Performance</div><div class="product">Alpine 3L</div><span class="status progress">已轉交負責部門</span><p class="small">案件 #81013 已由客服轉交負責部門審查，等待後續正式聯絡。</p></div>
-      <div class="brand"><div class="name">Goldwin</div><div class="product">替代方案待提案</div><span class="status waiting">原 Workwear 路線受限</span><p class="small">Goldwin 已確認目前工作服路線沒有我們需要的無中綿 Shell；中村さん正在確認其他合適方案。</p></div>
+      <div class="brand"><div class="name">Peak Performance</div><div class="product">Alpine 3L</div><span class="status stopped">本輪不進行</span><p class="small">8/18 Peak Performance Sales 正式回覆，因庫存確保困難、較希望 United 認定學校，以及日本 B2B 人力有限，本次決定不承接。</p></div>
+      <div class="brand"><div class="name">Goldwin</div><div class="product">替代方案待提案</div><span class="status waiting">原 Workwear 路線受限</span><p class="small">Goldwin 已確認目前工作服路線沒有我們需要的無中綿 Shell；負責人正在確認是否有其他合適方案。</p></div>
     </div>
-    <p class="small" style="margin-top:12px">Descente S.I.O SHELL 3L 仍保留為備案；其他備案品牌另有研究清單。現階段先等待主要候選的正式答案。</p>
+    <p class="small" style="margin-top:12px">Peak Performance 目前移出本輪主候選，但保留未來重新評估的可能。Descente S.I.O SHELL 3L 仍保留為備案；其他備案品牌另有研究清單。</p>
   </section>
 
   <section class="card">
@@ -62,13 +57,13 @@
   <section class="card">
     <h2>接下來</h2>
     <div class="flow">
-      <span class="step">等品牌正式回覆</span><span class="arrow">→</span>
+      <span class="step">等 Patagonia / Norrøna / Goldwin 正式回覆</span><span class="arrow">→</span>
       <span class="step">確認產品／男女配色／補貨</span><span class="arrow">→</span>
+      <span class="step">必要時啟動備案</span><span class="arrow">→</span>
       <span class="step">留下 2–3 個候選</span><span class="arrow">→</span>
-      <span class="step">比較價格、供應與實際使用</span><span class="arrow">→</span>
       <span class="step">Final Decision</span>
     </div>
-    <p class="small" style="margin-top:12px">目前還沒有決定品牌，也沒有需要立即回覆的信件。</p>
+    <p class="small" style="margin-top:12px">目前還沒有決定品牌。Peak Performance 已退出本輪；其他三個主要方向仍在等待正式答案。</p>
   </section>
 </div>
 </body>
