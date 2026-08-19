@@ -1,6 +1,6 @@
 # Uniform Project — Supplier Fact Record
 
-Last updated: 2026-08-18
+Last updated: 2026-08-19
 
 ## Purpose
 This file is the source-of-truth record for supplier information used in the Uniform Project. It is not intended to be displayed in full in the management brief. The brief may summarize it, but future analysis should refer back to this record before re-checking facts that have already been confirmed.
@@ -91,7 +91,7 @@ Direct replies from Norrøna Business / Sales and the Japan distributor, Full Ma
 ## Peak Performance
 
 ### Source
-Official reply from Peak Performance Sales / Amer Sports Japan received 2026-08-18, following inquiry #81013.
+Official reply from Peak Performance Sales / Amer Sports Japan received 2026-08-18, following inquiry #81013; our closing reply sent 2026-08-19.
 
 ### Confirmed
 - Japan has a formal business inquiry route.
@@ -101,14 +101,17 @@ Official reply from Peak Performance Sales / Amer Sports Japan received 2026-08-
 - The reasons given were: difficulty securing the requested inventory; preference for a United-certified school; and limited B2B staffing/resources in Japan.
 - Peak Performance Japan currently focuses branding activity on limited areas.
 - The reply states that the company intends to develop this business in the future and may reconsider if conditions improve.
+- Snow and Flow is in fact a NISEKO UNITED recognized/affiliated school. This fact was not clearly reflected in Peak Performance's initial assessment.
+- On 2026-08-19, we replied to clarify the NISEKO UNITED status, acknowledged Peak Performance Japan's current inventory/B2B limitations, and closed the current-round discussion without asking for reconsideration.
 
 ### Assessment
 - Peak Performance is no longer an active candidate for the current 2026/27 procurement round.
-- The rejection is primarily commercial/operational rather than a product-performance rejection.
-- It may be worth revisiting in a future season if B2B capacity or qualification requirements change.
+- The rejection appears primarily commercial/operational rather than a product-performance rejection.
+- The United-school point was based on incomplete information, but the inventory and B2B-capacity constraints remain material.
+- The current Japan setup does not appear mature enough for the long-term uniform continuity required by this project; future reconsideration only makes sense if Peak Performance expands its B2B supply structure.
 
 ### Status
-- **Not proceeding for current round.** Keep as a future watchlist item only.
+- **Current round closed.** Keep as a future watchlist item only.
 
 ---
 
