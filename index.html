@@ -1,53 +1,332 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Instructor Uniform Project — Current Progress Brief</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>宿舍配置總覽｜三方案</title>
 <style>
-:root{--bg:#f6f7f9;--card:#fff;--text:#1f2937;--muted:#667085;--line:#dfe3e8;--navy:#17324d;--blue:#eaf2f8;--blue-b:#9ec1d9;--amber:#fff6db;--amber-b:#e6c45c;--rose:#fff0f0;--rose-b:#df9a9a;--soft:#f8fafc;--green:#eaf4ee;--green-b:#a8cbb4;--gray:#f1f3f5}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",Arial,sans-serif;line-height:1.48}.wrap{max-width:980px;margin:0 auto;padding:24px 18px 42px}header{margin-bottom:10px}h1{font-size:28px;line-height:1.1;margin:0 0 4px;color:var(--navy)}.subtitle{color:var(--muted);font-size:13px}.status-line{margin-top:10px;padding:10px 13px;background:#eef3f7;border-left:4px solid var(--navy);border-radius:7px;font-size:13px}.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:9px 0;box-shadow:0 1px 2px rgba(16,24,40,.03)}.action{border:2px solid #d9a441;background:#fffaf0}.action strong{color:#8a5a00}h2{font-size:17px;margin:0 0 9px;color:var(--navy)}h3{font-size:14px;margin:9px 0 4px;color:#243b53}p{margin:4px 0}ul{margin:5px 0 0;padding-left:19px}li{margin:3px 0}.label{display:inline-block;padding:2px 7px;border-radius:999px;font-size:11px;font-weight:700;margin-right:5px}.confirmed{background:var(--blue);border:1px solid var(--blue-b);color:#24465f}.assessment{background:var(--amber);border:1px solid var(--amber-b);color:#6b5412}.tbc{background:var(--rose);border:1px solid var(--rose-b);color:#7d3f3f}.active{background:var(--green);border:1px solid var(--green-b);color:#28543a}.backup{background:var(--gray);border:1px solid #cfd4da;color:#555}.quote{font-size:16px;font-weight:700;color:#213547;border-left:3px solid var(--navy);padding-left:10px;margin:6px 0}.small,.note{font-size:12px;color:var(--muted)}a{color:#155a8a;text-decoration:none;font-weight:650}a:hover{text-decoration:underline}.status-item,.criterion,.unknown-item{border:1px solid var(--line);border-radius:8px;background:#fff;padding:10px 12px;margin:6px 0}.status-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap}.brand-name{font-size:16px;font-weight:800;color:var(--navy)}.status-grid{display:grid;grid-template-columns:118px 1fr;gap:3px 10px;margin-top:6px;font-size:13px}.status-grid .k{font-weight:700;color:#475467}.criteria,.brand-grid,.product-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.criterion{background:var(--soft);margin:0}.criterion h3{margin-top:0}.product-card{border:1px solid var(--line);border-radius:8px;padding:10px 12px;background:var(--soft)}.product-card h3{margin:0 0 4px}.product-card a{display:inline-block;margin:3px 8px 0 0}.info-table{width:100%;border-collapse:separate;border-spacing:0;font-size:12px;border:1px solid var(--line);border-radius:8px;overflow:hidden}.info-table th,.info-table td{padding:7px;vertical-align:top;text-align:left;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.info-table th:last-child,.info-table td:last-child{border-right:none}.info-table tr:last-child td{border-bottom:none}.info-table th{background:#f8fafc;color:#344054}.info-table td.confirmed-cell{background:var(--blue)}.info-table td.assessment-cell{background:var(--amber)}.info-table td.tbc-cell{background:var(--rose)}.flow{display:flex;flex-wrap:wrap;gap:5px;align-items:center}.step{background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:5px 8px;font-size:12px}.arrow{color:#98a2b3}.price-list{display:flex;flex-wrap:wrap;gap:7px}.price-box{background:var(--soft);border:1px solid var(--line);border-radius:7px;padding:7px 10px;font-size:12.5px}.risk{font-weight:700;color:#8a4b22}.good{font-weight:700;color:#245b3a}footer{margin-top:14px;color:#98a2b3;font-size:11px;text-align:right}@media(max-width:640px){.wrap{padding:18px 11px 38px}h1{font-size:24px}.card{padding:13px 12px}.status-grid{grid-template-columns:1fr}.criteria,.brand-grid,.product-grid{grid-template-columns:1fr}.info-table,.info-table thead,.info-table tbody,.info-table tr,.info-table th,.info-table td{display:block;width:100%}.info-table thead{display:none}.info-table{border:none}.info-table tr{border:1px solid var(--line);border-radius:8px;overflow:hidden;margin:7px 0}.info-table td{border-right:none;border-bottom:1px solid var(--line);padding:9px 10px}.info-table td:last-child{border-bottom:none}.info-table td:first-child{font-size:15px;font-weight:800;color:var(--navy);background:#f8fafc}}
+:root{
+  --bg:#f4f6f8;--card:#fff;--line:#d9dee7;--text:#1f2937;--muted:#6b7280;
+  --ok:#166534;--warn:#b91c1c;--accent:#2563eb;--soft:#eef4ff;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,"Segoe UI","Noto Sans TC",sans-serif;color:var(--text)}
+.wrap{width:100%;max-width:none;margin:0;padding:6px}
+.top{display:flex;justify-content:space-between;gap:6px;align-items:flex-end;flex-wrap:wrap;margin-bottom:6px}
+h1{margin:0;font-size:19px}.sub{color:var(--muted);font-size:12px;margin-top:2px}
+.toolbar{display:flex;gap:3px;flex-wrap:wrap}
+button{border:1px solid var(--line);background:#fff;border-radius:6px;padding:4px 7px;cursor:pointer;font-size:11px;font-weight:650}
+.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-bottom:4px}
+.sum{background:#fff;border:1px solid var(--line);border-radius:6px;padding:4px 6px}
+.sum b{font-size:14px}.sum span{font-size:11px;color:var(--muted);margin-left:5px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(220px,1fr));gap:2px;overflow-x:auto;align-items:start}
+.house{background:#fff;border:1px solid var(--line);border-radius:5px;overflow:hidden;min-width:220px}
+.house.over{border:2px solid var(--warn)}
+.house-head{padding:5px 6px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:3px;align-items:center}
+.house-name{font-size:14px;font-weight:800}
+.house-meta{font-size:10px;color:var(--muted);text-align:right}
+.rooms{display:grid;grid-template-columns:1fr;gap:2px;padding:3px}
+.room{border:1px dashed #bec6d1;border-radius:4px;background:#fafbfc;padding:2px 3px;min-height:30px}
+.room.dragover{background:var(--soft);border-color:var(--accent)}
+.room-head{display:flex;justify-content:flex-start;gap:4px;align-items:center;margin-bottom:2px;flex-wrap:wrap}
+.room-title{font-size:10px;font-weight:750}
+.room-type{font-size:9px;color:#64748b}
+.people{display:flex;flex-wrap:wrap;gap:2px;align-items:center}
+.person{background:#fff;border:1px solid #cfd6df;border-radius:999px;padding:2px 5px;cursor:grab;font-size:10px;line-height:1.05;white-space:nowrap}
+.person.single{background:#eaf3ff;border-color:#9ec5ff}
+.person.flexible{background:#fff1df;border-color:#f2b36b}
+.person.fixed{background:#e9f7ef;border-color:#8bc7a2;font-weight:650}
+.hk-badge{display:inline-block;margin-left:3px;padding:1px 3px;border-radius:4px;background:#111827;color:#fff;font-size:8px;font-weight:800;line-height:1}
+.f-badge{display:inline-block;margin-left:3px;padding:1px 3px;border-radius:4px;background:#db2777;color:#fff;font-size:8px;font-weight:800;line-height:1}
+.person.paired{box-shadow:inset 0 -2px 0 #cbd5e1}
+.unassigned-wrap{margin-top:4px;background:#fff;border:1px solid var(--line);border-radius:6px;padding:4px}
+.unassigned-title{font-size:12px;font-weight:700;margin-bottom:5px}
+.unassigned{min-height:30px;border:1px dashed #bec6d1;border-radius:5px;padding:3px;display:flex;flex-wrap:wrap;gap:2px}
+.legend{margin-top:4px;font-size:10px;color:#64748b;display:flex;gap:7px;flex-wrap:wrap}
+.bad{color:var(--warn);font-weight:700}
+
+@media(max-width:680px){.summary{grid-template-columns:repeat(4,minmax(150px,1fr));overflow-x:auto}.grid{grid-template-columns:repeat(4,220px)}.wrap{padding:6px}}
 </style>
 </head>
-<body><div class="wrap">
-<header>
-<h1>Instructor Uniform Project</h1>
-<div class="subtitle">Current Progress Brief · 2026.08.22</div>
-<div class="status-line"><strong>目前結論：</strong>Patagonia 仍是綜合第一順位；Mammut 與 Haglöfs 是正在快速推進的主要比較線。這不是最終品牌決定：三者都還沒有同時通過「適合產品、男女顏色、25–30 件供貨、後續追加」四項驗證。Navy／低飽和深藍與男女一致性暫不放寬，換色只保留為最後取捨。</div>
-</header>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div>
+      <h1>宿舍配置總覽｜三方案</h1>
+      <div class="sub">四棟宿舍一眼查看；可拖拉比較三個方案。</div>
+    </div>
+    <div class="toolbar">
+      <button onclick="loadPlan1()">方案一｜原配置</button>
+      <button onclick="loadPlan2()">方案二｜廣東話平均</button>
+      <button onclick="loadPlan3()">方案三｜Kai → Yellow</button>
+      <button onclick="loadPlan4()">方案四｜Kadoya 5 人</button>
+      <button onclick="clearRooms()">全部未分配</button>
+      <button onclick="saveNow()">儲存</button>
+      <button onclick="loadSaved()">讀取</button>
+    </div>
+  </div>
 
-<section class="card action"><h2>Current Action</h2><p><strong>先驗證產品、顏色與實際供貨，再進 sample 與尺寸統計。</strong> Mammut 已提出 8/26 或 8/27 線上會議，尚待決定是否接受；Haglöfs 商業條件已較清楚，現在集中確認本季庫存與顏色辨識；Patagonia、Norrøna、Goldwin 依各自回覆節點繼續推進。</p></section>
+  <div class="summary" id="summary"></div>
+  <div class="grid" id="grid"></div>
 
-<section class="card"><h2>1 | Main Candidates</h2>
-<div class="status-item"><div class="status-head"><div class="brand-name">Patagonia</div><span class="label active">Provisional #1 Overall</span></div><div class="status-grid"><div class="k">排序理由</div><div>正式 Uniform Program、小量追加機制、品牌形象、repair／long-life 文化與長期制服系統的綜合匹配度最高。</div><div class="k">已確認</div><div>問卷 8/15 已提交；同產品首單 10 件，後續同產品可從 1 件追加並維持同折扣率；產品與顏色不保證永久延續。</div><div class="k">尚未通過</div><div>2026/27 可供的純 shell、男女同色、首批 25–30 件庫存，以及產品／顏色後繼策略。</div><div class="k">判斷</div><div><strong>第一順位是綜合評價，不代表已經可以採購。</strong>若實際可供產品不符合硬性條件，排序會重新調整。</div></div></div>
+  <div class="unassigned-wrap">
+    <div class="unassigned-title">未分配</div>
+    <div class="unassigned" id="unassigned"></div>
+  </div>
 
-<div class="status-item"><div class="status-head"><div class="brand-name">Mammut</div><span class="label active">Active / Rising</span></div><div class="status-grid"><div class="k">已確認</div><div>Mammut Japan WHS Senior Manager Saito 直接接手；Mtn. Pro 2.0 有日本到貨資料，也已收到我們對 non-insulated Stoney／其他 snow shell 的要求。</div><div class="k">重要限制</div><div>目前分享的 Mtn. Pro 庫存是男款 mammut red，尚未解決 Navy／muted blue、男女一致與 25–30 件 mixed-gender 供貨。</div><div class="k">商談</div><div>Saito 提出 8/26 或 8/27 日文線上會議，目前尚未約定。需決定是否接受，並在會前整理產品、顏色、供貨、追加及正式價格問題。</div><div class="k">價格註記</div><div>Stock sheet 列 RRP ¥140,000、`WHS Price` ¥84,000；稅別及本案適用性未確認，<strong>不能視為 Snow and Flow 正式報價。</strong></div></div></div>
+  <div class="legend">
+    <span><b style="background:#e9f7ef;border:1px solid #8bc7a2;padding:2px 6px;border-radius:999px">固定同房</b> Annie/Jason、Mori/Tracy、Ray/Irene、Max/Anna</span>
+    <span><b style="background:#fff1df;border:1px solid #f2b36b;padding:2px 6px;border-radius:999px">可拆雙人</b> Lina、珊、Ryan、鉦傑</span>
+    <span><b style="background:#eaf3ff;border:1px solid #9ec5ff;padding:2px 6px;border-radius:999px">Single</b> 其餘可自由移動</span>
+    <span>單人房拖到已有人房間＝直接交換；雙人房＝直接加入</span>
+      <span><span class="hk-badge">HK</span> 香港成員</span>
+      <span><span class="f-badge">F</span> 女生</span>
+    <span><b>限制：</b>Richard 不可安排到 Kadoya</span>
+      <span><b>Kadoya：</b>只有一個洗手槽；方案四限制為 5 人。</span>
+  </div>
+</div>
 
-<div class="status-item"><div class="status-head"><div class="brand-name">Haglöfs / RCT Japan</div><span class="label active">Active / Strong Product Fit</span></div><div class="status-grid"><div class="k">已確認</div><div>Vassi GTX II 是非中綿 3L snow shell，並有 Niseko ski school 制服實例；本案沒有目錄外／隱藏 snow shell，需從日本公開產品線選擇。</div><div class="k">商業條件</div><div>團體採購條件與下一季早期訂貨時程已收到正式說明；詳細折扣、付款條件與採購試算保留於內部紀錄。</div><div class="k">關鍵疑點</div><div>RCT 回信稱 Turn Blue，26FW order sheet／官方頁列 Tarn Blue；兩者是否同色、改名或不同色仍未確認。本季 25–30 件庫存也未保證。</div><div class="k">差異化風險</div><div>ACCENT 去年使用 Turn Blue。即使只採購 jacket，撞款／撞色仍是實質扣分；沒有目錄外產品後，必須從現有款色中判斷能否建立足夠辨識度。</div></div></div>
-</section>
+<script>
+const houses = {
+  Midori:{
+    maxPeople:6,
+    rooms:[
+      {id:"M1",label:"R1",type:"雙人",softCap:2},
+      {id:"M2",label:"R2",type:"雙人",softCap:2},
+      {id:"M3",label:"R3",type:"彈性",softCap:2},
+      {id:"M4",label:"R4",type:"彈性",softCap:2},
+    ]
+  },
+  Momiji:{
+    maxPeople:7,
+    rooms:[
+      {id:"MO1",label:"R1",type:"雙人",softCap:2},
+      {id:"MO2",label:"R2",type:"雙人",softCap:2},
+      {id:"MO3",label:"R3",type:"單/雙",softCap:2},
+      {id:"MO4",label:"R4",type:"彈性",softCap:2},
+      {id:"MO5",label:"R5",type:"彈性",softCap:2},
+    ]
+  },
+  Kadoya:{
+    maxPeople:6,
+    rooms:[
+      {id:"K1",label:"R1",type:"雙人",softCap:2},
+      {id:"K2",label:"R2",type:"單人",softCap:1},
+      {id:"K3",label:"R3",type:"單人",softCap:1},
+      {id:"K4",label:"R4",type:"單人",softCap:1},
+      {id:"K5",label:"R5",type:"單人",softCap:1},
+    ]
+  },
+  Yellow:{
+    maxPeople:7,
+    rooms:[
+      {id:"Y1",label:"R1",type:"彈性",softCap:2},
+      {id:"Y2",label:"R2",type:"彈性",softCap:2},
+      {id:"Y3",label:"R3",type:"彈性",softCap:2},
+      {id:"Y4",label:"R4",type:"彈性",softCap:2},
+      {id:"Y5",label:"R5",type:"彈性",softCap:2},
+      {id:"Y6",label:"R6",type:"彈性",softCap:2},
+    ]
+  }
+};
 
-<section class="card"><h2>2 | Temporarily Downgraded — Keep Communication Open</h2>
-<table class="info-table"><thead><tr><th>Brand</th><th>目前仍有的優勢</th><th>暫時降級原因</th><th>恢復評估條件</th></tr></thead><tbody>
-<tr><td><strong>Norrøna</strong><br><span class="label assessment">Downgraded</span></td><td class="confirmed-cell">Full Marks 日本代理正式接手；Naoki 推薦 Lofoten Gore-Tex Pro。Norrøna 2295／Indigo Night 是接近理想的顏色參考。</td><td class="assessment-cell">標準 26/27 男款 Brilliant Blue、女款 Cashmere Blue 偏亮且不同；Caviar Black 男女一致，但不是第一選擇。</td><td class="tbc-cell">若有合適的庫存／特殊色方案且 25–30 件可供，恢復完整評估；價格、未來追加與顏色延續仍需另行驗證。</td></tr>
-<tr><td><strong>Goldwin</strong><br><span class="label assessment">Downgraded</span></td><td class="confirmed-cell">Snow Workwear 的同設計／同色長期延續概念非常貼合本案；日本端支援強。</td><td class="assessment-cell">目前 Workwear 路線沒有 non-insulated shell，與硬性條件直接衝突。</td><td class="tbc-cell">Nakamura 若能提出另一條 non-insulated 3L shell 的 school/team 採購方案，重新評估。</td></tr>
-</tbody></table>
-<p class="note">內部可以降級，但在 final decision 前不武斷關閉仍有可能提出新方案的供應商對話。</p>
-</section>
+const fixedPairs={
+  Annie:"Jason",Jason:"Annie",
+  Mori:"Tracy",Tracy:"Mori",
+  Ray:"Irene",Irene:"Ray",
+  max:"anna",anna:"max"
+};
+const flexiblePairPeople=new Set(["Lina","珊","Ryan","鉦傑"]);
+const everyone=["Annie","Jason","Ann","Mori","Tracy","Sabrina","Niu","Zoey","Ray","Irene","Ryan","鉦傑","mark","isaac","Erica","Kai","Lina","珊","Tony","Keith","Joanna","max","anna","bill","Richard"];
+const hkPeople=new Set(["Mori","Tracy","mark","isaac","Richard","Keith","Tony"]);
+const femalePeople=new Set(["Annie","Tracy","Ann","Irene","Zoey","Lina","珊","Erica","Joanna","anna"]);
+const noKadoya=new Set(["Richard"]);
 
-<section class="card"><h2>3 | Closed This Round</h2><p><strong>Peak Performance：</strong>供應商因 25–30 件庫存、Japan B2B 人力與品牌活動區域限制正式婉拒。本輪關閉，不影響未來供應體制改變後重新觀察。其他低順位與備援品牌不在主進度頁展開。</p></section>
+function emptyState(){
+  const st={unassigned:[]};
+  for(const [h,info] of Object.entries(houses)){
+    st[h]={};
+    for(const r of info.rooms) st[h][r.id]=[];
+  }
+  return st;
+}
+function makePlan1(){
+  const s=emptyState();
+  s.Midori.M1=["Annie","Jason"]; s.Midori.M2=["Mori","Tracy"]; s.Midori.M3=["Ann"]; s.Midori.M4=["Sabrina"];
+  s.Momiji.MO1=["Ray","Irene"]; s.Momiji.MO2=["Ryan","鉦傑"]; s.Momiji.MO3=["Niu"]; s.Momiji.MO4=["Zoey"];
+  s.Kadoya.K1=["Lina","珊"]; s.Kadoya.K2=["mark"]; s.Kadoya.K3=["isaac"]; s.Kadoya.K4=["Erica"]; s.Kadoya.K5=["Kai"];
+  s.Yellow.Y1=["max","anna"]; s.Yellow.Y2=["Tony"]; s.Yellow.Y3=["Keith"]; s.Yellow.Y4=["Joanna"]; s.Yellow.Y5=["bill"]; s.Yellow.Y6=["Richard"];
+  return s;
+}
+function makePlan2(){
+  const s=makePlan1();
+  // 廣東話平均：Midori 2（Mori/Tracy）、Momiji 1（Richard）、
+  // Kadoya 2（mark/isaac）、Yellow 2（Tony/Keith）
+  s.Yellow.Y6=[];
+  s.Momiji.MO5=["Richard"];
+  return s;
+}
+function makePlan3(){
+  const s=makePlan1();
+  // 黃屋氣氛上升：Kai 與 Bill 交換，避免 Yellow 超額，也遵守 Richard 不進 Kadoya
+  s.Kadoya.K5=["bill"];
+  s.Yellow.Y5=["Kai"];
+  return s;
+}
+function makePlan4(){
+  const s=makePlan1();
+  // Kadoya 5 人：Kai 不動，Lina 移到 Momiji
+  s.Kadoya.K1=["珊"];
+  s.Momiji.MO5=["Lina"];
+  return s;
+}
 
-<section class="card"><h2>4 | Hard Requirements &amp; Review Rule</h2><div class="criteria"><div class="criterion"><h3>Product Fit</h3><p>Non-insulated 3L shell、北海道日常 teaching、Ski + Snowboard、男女一致 team image。<strong>本輪只採購 jacket，暫無 pants 計畫。</strong></p></div><div class="criterion"><h3>Color</h3><p><strong>Navy first.</strong> 具體 visual reference：<strong>Mammut Marine／Norrøna 2295／Indigo Night／Haglöfs Tarn Blue</strong>。它們是顏色參考，不代表 snow shell 可供該色。</p></div><div class="criterion"><h3>Uniform Continuity</h3><p>首批男女合計 25–30 件；後續通常每次 2–5 件；小量追加能力與產品／顏色延續分開判斷。</p></div><div class="criterion"><h3>Commercial / Long-term Value</h3><p>Japan supply、正式 team price、lead time、repair/warranty、logo、season replacement speed。</p></div></div><p class="note">顏色層級：① 男女同一 navy／deep muted blue；② 非常接近的低飽和藍；③ restrained dark-blue + black／blue-black。Bright／electric blue 或男女明顯不同的藍色不視為等價方案。</p></section>
+let current=makePlan1(),dragging=null;
+function housePeople(h){return Object.values(current[h]).flat().length}
+function locate(person){
+  if(current.unassigned.includes(person)) return {kind:"unassigned"};
+  for(const h of Object.keys(houses)) for(const r of houses[h].rooms) if(current[h][r.id].includes(person)) return {kind:"room",house:h,room:r.id};
+  return null;
+}
+function removePerson(person){
+  const loc=locate(person); if(!loc)return;
+  if(loc.kind==="unassigned") current.unassigned=current.unassigned.filter(x=>x!==person);
+  else current[loc.house][loc.room]=current[loc.house][loc.room].filter(x=>x!==person);
+}
+function moveToRoom(person,h,room){
+  if(h==="Kadoya" && noKadoya.has(person)){
+    alert(`${person} 不可安排到 Kadoya。`);
+    render();
+    return;
+  }
+  const targetRoom = houses[h].rooms.find(r=>r.id===room);
+  const source = locate(person);
 
-<section class="card"><h2>5 | Jacket Visual Reference — Official Product Pages</h2><p class="note">以下連結用於查看外套版型、細節與公開顏色。<strong>零售頁不等於日本 B2B 庫存或 Snow and Flow 可採購顏色已確認。</strong></p><div class="product-grid">
-<div class="product-card"><h3>Patagonia</h3><p><strong>PowSlayer Jacket</strong> — benchmark；Uniform Program 實際可供款／色仍待確認。</p><a href="https://www.patagonia.com/product-mens-powslayer-ski-snowboard-jacket/30306.html" target="_blank" rel="noopener">男款實體 ↗</a><a href="https://www.patagonia.com/product/womens-powslayer-ski-snowboard-jacket/30314.html" target="_blank" rel="noopener">女款實體 ↗</a></div>
-<div class="product-card"><h3>Mammut</h3><p><strong>Mtn. Pro 2.0 Ski Patrol 3L GTX HS Hooded Jacket Men</strong></p><a href="https://www.mammut.com/sk/sk/products/1010-31610/mtn-pro-2-0-ski-patrol-3l-gtx-hs-hooded-jacket-men" target="_blank" rel="noopener">Mtn. Pro 2.0 ↗</a><p><strong>Stoney HS Hooded Jacket Men — Marine</strong></p><a href="https://www.mammut.com/uk/en/products/1010-31010-5118/stoney-hs-hooded-jacket-men" target="_blank" rel="noopener">Stoney Marine ↗</a></div>
-<div class="product-card"><h3>Haglöfs</h3><p><strong>Vassi GTX II Jacket — Tarn Blue</strong></p><a href="https://www.haglofs.com/en/men/activities-men/activities-ski-snowboarding-men/vassi-gtx-ii-jacket-men-6077913N5" target="_blank" rel="noopener">男款實體 ↗</a><a href="https://www.haglofs.com/en/women/activities-women/activities-ski-snowboarding-women/vassi-gtx-ii-jacket-women-6077933N5" target="_blank" rel="noopener">女款實體 ↗</a></div>
-<div class="product-card"><h3>Norrøna</h3><p><strong>Lofoten Gore-Tex Pro Jacket</strong> — Naoki 正式推薦的產品 family。</p><a href="https://www.norrona.com/en-GB/products/lofoten/lofoten-gore-tex-pro-jacket-men-25/?color=7718" target="_blank" rel="noopener">男款實體 ↗</a><a href="https://www.norrona.com/en-GB/Products/lofoten/" target="_blank" rel="noopener">Lofoten 系列／女款 ↗</a></div>
-</div></section>
+  // Fixed pairs always move together and can only be placed into double rooms.
+  if(fixedPairs[person]){
+    const mate=fixedPairs[person];
+    if(h==="Kadoya" && (noKadoya.has(person) || noKadoya.has(mate))){
+      alert(`${person} / ${mate} 中有成員不可安排到 Kadoya。`);
+      render();
+      return;
+    }
+    if(!(targetRoom && targetRoom.type.includes("雙人"))){
+      alert(`${person} / ${mate} 是固定同房組，請拖到雙人房。`);
+      render();
+      return;
+    }
+    removePerson(person);
+    removePerson(mate);
+    current[h][room]=current[h][room].filter(x=>x!==person && x!==mate);
+    current[h][room].push(person,mate);
+    render();
+    return;
+  }
 
-<section class="card"><h2>6 | Public Retail Price References</h2><div class="price-list"><div class="price-box"><strong>Mammut Mtn. Pro 2.0 Ski Patrol Men</strong><br>RRP ¥140,000<br><span class="small">公開／供應資料參考；正式本案價格未確認</span></div><div class="price-box"><strong>Haglöfs Vassi GTX II</strong><br>Retail ¥85,000 excl. tax / ¥93,500 incl. tax<br><span class="small">團體採購條件已另行確認，詳細內容保留於內部紀錄</span></div><div class="price-box"><strong>Norrøna Lofoten GTX Pro Jacket</strong><br>¥125,000 excl. tax / ¥137,500 incl. tax<br><span class="small">26/27 retail reference；正式 team price 未確認</span></div><div class="price-box"><strong>Norrøna Lofoten GTX Jacket</strong><br>¥92,000 excl. tax / ¥101,200 incl. tax<br><span class="small">26/27 retail reference；正式 team price 未確認</span></div></div><p class="note"><strong>Procurement Budget:</strong> TBD after official project quotes. 公開頁只列零售參考，不揭露供應商折扣、付款條件或內部採購試算。</p></section>
+  const occupants = [...current[h][room]];
 
-<section class="card"><h2>7 | Decisions &amp; Immediate Next Steps</h2><ul><li><strong>Mammut：</strong>決定是否接受 8/26 或 8/27 日文線上會議；若接受，會前先發出精簡議題。</li><li><strong>Haglöfs：</strong>確認本季 25–30 件庫存、Turn Blue／Tarn Blue 關係、與 ACCENT 的實際辨識度及未來追加。</li><li><strong>Patagonia：</strong>截至 8/22 尚待資格與產品回覆；下一工作日仍無實質進展時，進行一次簡短追蹤。</li><li><strong>Norrøna：</strong>等待 2295／Indigo Night 方向或其他庫存色方案；有可行方案後再恢復完整評估，不先取樣。</li><li><strong>Goldwin：</strong>等待 Nakamura 提出 non-insulated shell 替代路線。</li></ul><p class="note">現階段不需要決定最終品牌，也不進入全員尺寸統計。下一個真正決策點是：至少一個品牌提出可驗證的產品、顏色、首批供貨與商業條件組合。</p></section>
+  // Double rooms: allow adding directly.
+  if(targetRoom && targetRoom.type.includes("雙人")){
+    removePerson(person);
+    if(!current[h][room].includes(person)) current[h][room].push(person);
+    render();
+    return;
+  }
 
-<footer>Current progress brief · last updated 2026.08.22</footer>
-</div></body></html>
+  // Non-double room with one occupant: swap positions.
+  if(occupants.length===1 && occupants[0]!==person){
+    const other = occupants[0];
+
+    // Prevent splitting a fixed pair by swapping one fixed member out.
+    if(fixedPairs[other]){
+      alert(`${other} / ${fixedPairs[other]} 是固定同房組，不能拆開交換。`);
+      render();
+      return;
+    }
+
+    if(source && source.kind==="room"){
+      current[source.house][source.room] = current[source.house][source.room].filter(x=>x!==person);
+      current[h][room] = [person];
+      current[source.house][source.room].push(other);
+    }else if(source && source.kind==="unassigned"){
+      current.unassigned = current.unassigned.filter(x=>x!==person);
+      current[h][room] = [person];
+      current.unassigned.push(other);
+    }
+    render();
+    return;
+  }
+
+  // Empty room or other cases: move normally.
+  removePerson(person);
+  current[h][room].push(person);
+  render();
+}
+function moveToUnassigned(person){
+  if(fixedPairs[person]){
+    const mate=fixedPairs[person];
+    if(h==="Kadoya" && (noKadoya.has(person) || noKadoya.has(mate))){
+      alert(`${person} / ${mate} 中有成員不可安排到 Kadoya。`);
+      render();
+      return;
+    }
+    removePerson(person); removePerson(mate);
+    current.unassigned.push(person,mate);
+  }else{
+    removePerson(person); current.unassigned.push(person);
+  }
+  render();
+}
+function personEl(person){
+  const p=document.createElement("span");
+  let cls="person ";
+  if(fixedPairs[person]) cls+="fixed";
+  else if(flexiblePairPeople.has(person)) cls+="flexible";
+  else cls+="single";
+  p.className=cls;
+  p.draggable=true;
+  p.innerHTML=`<span>${person}${hkPeople.has(person)?' <span class="hk-bade">HK</span>':''}${femalePeople.has(person)?' <span class="f-badge">F</span>':''}</span>`;
+  if(fixedPairs[person]) p.title=d固定同房：${fixedPairs[person]}（拖動會一起移動）`;
+  else if(flexiblePairPeople.has(person)) p.title="原本雙人配置，但可以拆開";
+  else p.title="可自由移動";
+  p.addEventListener("dragstart",()=>dragging=person);
+  return p;
+}
+function render(){
+  const grid=document.getElementById("grid"),summary=document.getElementById("summary"),unassigned=document.getElementById("unassigned");
+  grid.innerHTML="";summary.innerHTML="";unassigned.innerHTML="";
+  for(const [h,info] of Object.entries(houses)){
+    const count=housePeople(h),over=count>info.maxPeople;
+    const s=document.createElement("div");s.className="sum";s.innerHTML=`<b>${h} ${count}/${info.maxPeople}</b><span>${info.rooms.length} rooms${over?' · <span class="bad">超額</span>':''}</span>`;summary.appendChild(s);
+
+    const box=document.createElement("section");box.className="house"+(over?" over":"");
+    box.innerHTML=`<div class="house-head"><div class="house-name">${h}</div><div class="house-meta">${count}/${info.maxPeople} 人<br>${info.rooms.length} 房</div></div><div class="rooms"></div>`;
+    grid.appendChild(box);
+    const roomsEl=box.querySelector(".rooms");
+    for(const r of info.rooms){
+      const room=document.createElement("div");room.className="room";
+      const rc=current[h][r.id].length;
+      room.innerHTML=`<div class="room-head"><span class="room-title">${r.label}</span><span class="room-type">· ${r.type} · ${rc}人</span></div><div class="people"></div>`;
+      room.addEventListener("dragover",e=>{e.preventDefault();room.classList.add("dragover")});
+      room.addEventListener("dragleave",()=>room.classList.remove("dragover"));
+      room.addEventListener("drop",e=>{e.preventDefault();room.classList.remove("dragover");if(dragging){moveToRoom(dragging,h,r.id);dragging=null}});
+      const people=room.querySelector(".people");current[h][r.id].forEach(person=>people.appendChild(personEl(person)));
+      roomsEl.appendChild(room);
+    }
+  }
+  unassigned.addEventListener("dragover",e=>{e.preventDefault();unassigned.classList.add("dragover")});
+  unassigned.addEventListener("dragleave",()=>unassigned.classList.remove("dragover"));
+  unassigned.addEventListener("drop",e=>{e.preventDefault();unassigned.classList.remove("dragover");if(dragging){moveToUnassigned(dragging);dragging=null}});
+  current.unassigned.forEach(person=>unassigned.appendChild(personEl(person)));
+}
+function loadPlan1(){current=makePlan1();render()}
+function loadPlan2(){current=makePlan2();render()}
+function loadPlan3(){current=makePlan3();render()}
+function loadPlan4(){current=makePlan4();render()}
+function clearRooms(){current=emptyState();current.unassigned=[...everyone];render()}
+function saveNow(){localStorage.setItem("dormCompactConfig25",JSON.stringify(current));alert("已倲存⌉}
+function loadSaved(){const s=localStorage.getItem("dormCompactConfig25");if(!s){alert("沒有已儲存配置");return}current=JSON.parse(s);render()}
+render();
+</script>
+</body>
+</html>
